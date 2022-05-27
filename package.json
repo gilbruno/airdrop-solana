@@ -1,0 +1,23 @@
+{
+  "name": "airdrop-solana",
+  "version": "1.0.0",
+  "description": "## Description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gilbruno/airdrop-solana.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gilbruno/airdrop-solana/issues"
+  },
+  "homepage": "https://github.com/gilbruno/airdrop-solana#readme",
+  "devDependencies": {
+    "@solana/web3.js": "^1.43.2"
+  }
+}
