@@ -15,7 +15,7 @@ const secretKey = wallet._keypair.secretKey
 console.log(publicKey)
 console.log(secretKey)
 
-
+//---------------------------------------------------------------- getWalletBalance
 const getWalletBalance = async() => {
     try {
         const connection = new Connection(clusterApiUrl('devnet'), 'confirmed')
@@ -26,7 +26,20 @@ const getWalletBalance = async() => {
     }
 }
 
+//--------------------------------------------------------------------- airdropSol
+const airdropSol = async() => {
+    try {
+        const connection = new Connection(clusterApiUrl('devnet'), 'confirmed')
+        const fromAirdropSignature = await connection.requestAirdrop(publicKey, 2 * LAMPORTS_PER_SOL)
+        await connection.confirmTransaction(fromAirdropSignature)
+
+    }catch(err){
+        console.log(err)
+    }
+}
 const main = async() => {
+    await getWalletBalance()
+    await airdropSol()
     await getWalletBalance()
 }
 
